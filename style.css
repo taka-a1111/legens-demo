@@ -240,14 +240,13 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   color: #ffffff;
 }
 
-/* ナビゲーション: ロゴ右端〜画面右端まで均等分散 */
+/* ナビゲーション: 右側にまとめて配置（画面幅に依存しない） */
 .header-nav {
-  flex: 1;
+  margin-left: auto;
   display: flex;
   gap: 0;
   align-items: stretch;
-  justify-content: space-around;
-  padding-right: 0;
+  padding-right: 32px;
 }
 .header-nav a {
   display: flex;
@@ -255,7 +254,7 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 0 24px;
+  padding: 0 28px;
   font-size: 14px;
   font-weight: 500;
   color: var(--gray-900);
