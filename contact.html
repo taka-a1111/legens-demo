@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜有限会社レジェンズ｜電気設備工事のご相談</title>
+<meta name="description" content="有限会社レジェンズへのお問い合わせはこちら。電気設備工事・空調工事に関するご相談、お見積もりのご依頼はお電話またはフォームからお気軽にどうぞ。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/pages.css">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233CA77A'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='32' font-weight='700' fill='%23fff' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div class="demo-badge">DEMO - CLIENT REVIEW</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="./index.html" class="header-logo">
+      <div class="logo-mark">L</div>
+      <div class="logo-text">LEGENS</div>
+    </a>
+    <nav class="header-nav">
+      <a href="./index.html"><span>ホーム</span><span class="nav-en">HOME</span></a>
+      <a href="./works.html"><span>施工事例</span><span class="nav-en">WORKS</span></a>
+      <a href="./company.html"><span>会社案内</span><span class="nav-en">COMPANY</span></a>
+      <a href="./contact.html" class="current"><span>お問い合わせ</span><span class="nav-en">CONTACT</span></a>
+    </nav>
+    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<div class="container">
+  <nav class="breadcrumb">
+    <a href="./index.html">Home</a>
+    <span class="breadcrumb-sep">&gt;</span>
+    <span>お問い合わせ</span>
+  </nav>
+</div>
+
+<div class="page-hero">
+  <h1>CONTACT</h1>
+  <p class="ja">お問い合わせ</p>
+</div>
+
+<div class="contact-intro container-narrow">
+  <p>
+    各種お問い合わせは<br>
+    下記フォームまたはお電話よりお気軽にお問い合わせください。
+  </p>
+  <div class="contact-tel">
+    <a href="tel:0728068890">072-806-8890</a>
+  </div>
+  <p class="contact-tel-note">受付時間：月〜土曜日　8:00〜17:30</p>
+</div>
+
+<form class="contact-form reveal" action="./contact.php" method="post" novalidate>
+  <div class="form-row">
+    <label for="company">会社名</label>
+    <div>
+      <input type="text" id="company" name="company" autocomplete="organization">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="name">お名前 <span class="required-badge">必須</span></label>
+    <div>
+      <input type="text" id="name" name="name" required autocomplete="name">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="tel">お電話番号</label>
+    <div>
+      <input type="tel" id="tel" name="tel" autocomplete="tel">
+      <p class="form-note">例) 072-806-8890</p>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="email">E-mail <span class="required-badge">必須</span></label>
+    <div>
+      <input type="email" id="email" name="email" required autocomplete="email">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="message">ご要望詳細</label>
+    <div>
+      <textarea id="message" name="message"></textarea>
+    </div>
+  </div>
+
+  <div class="privacy-box">
+    <h3>個人情報の取り扱いについて</h3>
+    <div class="privacy-content">
+      <p>有限会社レジェンズ（以下「当社」といいます）は、個人情報を適正に取り扱うことの重要性を認識し、個人情報の保護に関する法律を遵守し、個人情報の適正な収集、利用及び安全管理を行なうため、次の通り個人情報保護方針を定め、その実現に努めます。</p>
+      <ol>
+        <li>当社は、個人情報を収集又は利用するにあたっては、その利用目的を明確にし、その目的の範囲内において適正に使用いたします。</li>
+        <li>当社は、皆様の個人情報に関し、漏洩、紛失、改ざん、不正アクセス等の防止に努め適切な安全管理措置を実施いたします。</li>
+        <li>当社は、法令に定める場合を除き、ご本人の同意なく個人情報を第三者に提供することはありません。</li>
+      </ol>
+      <p>上記の個人情報の取扱いに同意いただいたうえでお問い合わせください。</p>
+    </div>
+  </div>
+
+  <div class="privacy-agree">
+    <label>
+      <input type="checkbox" name="agree" value="1" required>
+      <span>同意する</span>
+    </label>
+  </div>
+
+  <div class="form-submit">
+    <button type="submit">送信する</button>
+  </div>
+</form>
+
+</main>
+
+<section class="footer-banners">
+  <div class="container">
+    <a href="#" class="banner-card">
+      <div class="banner-icon">B</div>
+      <div class="banner-text"><strong>BLOG</strong><span>有益なコンテンツをお届けします</span></div>
+    </a>
+    <a href="#" class="banner-card">
+      <div class="banner-icon">人</div>
+      <div class="banner-text"><strong>正社員募集</strong><span>一緒に働く仲間を募集しています</span></div>
+    </a>
+    <a href="#" class="banner-card">
+      <div class="banner-icon">協</div>
+      <div class="banner-text"><strong>協力会社募集</strong><span>協力いただける会社を募集しています</span></div>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-menus">
+      <div>
+        <h4 class="footer-menu-title">メニュー</h4>
+        <ul class="footer-menu-list">
+          <li><a href="./index.html">ホーム</a></li>
+          <li><a href="./works.html">施工事例</a></li>
+          <li><a href="./company.html">会社案内</a></li>
+          <li><a href="./contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-menu-title">その他</h4>
+        <ul class="footer-menu-list">
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">正社員募集</a></li>
+          <li><a href="#">協力会社募集</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-logo">L</div>
+      <div class="footer-name">LEGENS</div>
+      <div class="footer-copy">Copyright &copy; LEGENS Ltd. All Rights Reserved.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>
