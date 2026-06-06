@@ -213,7 +213,7 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   justify-content: space-between;
 }
 
-/* ロゴエリア: キューブ＋legendsの一体型ロゴ（白背景） */
+/* ロゴエリア: 鳥ロゴ（正方形・透過PNG、白背景） */
 .header-logo {
   display: flex;
   align-items: center;
@@ -222,10 +222,11 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   text-decoration: none;
   min-width: auto;
 }
-.header-logo .logo-full-img {
-  height: 56px;
-  width: auto;
+.header-logo .logo-bird-img {
+  height: 76px;
+  width: 76px;
   display: block;
+  object-fit: contain;
 }
 
 /* ナビゲーション: 黒文字、各項目が高さ100%の縦長セル */
@@ -469,7 +470,7 @@ main {
     min-width: auto;
     padding: 0;
   }
-  .header-logo .logo-full-img { height: 40px; }
+  .header-logo .logo-bird-img { height: 52px; width: 52px; }
 
   .menu-toggle { display: block; }
 
