@@ -213,31 +213,19 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   justify-content: space-between;
 }
 
-/* ロゴエリア: 3Dキューブ + "legends"テキスト（白背景） */
+/* ロゴエリア: キューブ＋legendsの一体型ロゴ（白背景） */
 .header-logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
   background: transparent;
   padding: 0;
   text-decoration: none;
   min-width: auto;
-  justify-content: center;
 }
-.header-logo .logo-mark-img {
-  width: 44px;
-  height: 44px;
-  object-fit: contain;
+.header-logo .logo-full-img {
+  height: 56px;
+  width: auto;
   display: block;
-  flex-shrink: 0;
-}
-.header-logo .logo-text {
-  font-family: var(--font-en, "Montserrat", sans-serif);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  color: var(--gray-900);
 }
 
 /* ナビゲーション: 黒文字、各項目が高さ100%の縦長セル */
@@ -480,10 +468,8 @@ main {
   .header-logo {
     min-width: auto;
     padding: 0;
-    gap: 2px;
   }
-  .header-logo .logo-mark-img { width: 34px; height: 34px; }
-  .header-logo .logo-text { font-size: 11px; }
+  .header-logo .logo-full-img { height: 40px; }
 
   .menu-toggle { display: block; }
 
