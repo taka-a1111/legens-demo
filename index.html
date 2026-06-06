@@ -1,230 +1,808 @@
 <!DOCTYPE html>
-<html lang="ja"><script>document.documentElement.classList.add("js");</script>
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>有限会社レジェンズ｜大阪の電気設備工事・空調工事</title>
-<meta name="description" content="大阪府大東市の有限会社レジェンズは、電気設備工事・電気土木工事・空調設備工事をワンストップで提供。確かな技術と迅速な対応で、地域の暮らしと産業を支える総合パートナーです。">
-<meta name="keywords" content="電気設備工事,空調工事,大阪,電気土木,有限会社レジェンズ">
-
-<!-- OGP -->
-<meta property="og:title" content="有限会社レジェンズ｜大阪の電気設備工事・空調工事">
-<meta property="og:description" content="電気・土木・空調をワンストップで。確かな施工で、未来の基盤を築く。">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
-<meta property="og:site_name" content="有限会社レジェンズ">
-
-<!-- Fonts -->
+<title>有限会社レジェンズ｜暮らしと産業の、その先へ。</title>
+<meta name="description" content="有限会社レジェンズは、電気設備工事・電気土木・空調設備工事を中心に、確かな技術と迅速な対応でお客様の暮らしと事業を支える総合設備パートナーです。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #5B9B6E;
+  --green-dark: #487D58;
+  --green-light: #7BB48B;
+  --green-pale: #E8F1EB;
+  --dark: #2C2C2C;
+  --dark-soft: #3A3A3A;
+  --text: #2A2A2A;
+  --text-mid: #5C5C5C;
+  --text-light: #8A8A8A;
+  --bg: #FFFFFF;
+  --bg-soft: #F5F4F0;
+  --bg-warm: #ECEAE3;
+  --border: #E5E5E5;
+  --gradient-hero: linear-gradient(135deg, #6FA37E 0%, #84A092 35%, #8A9BA0 70%, #8E9BA3 100%);
+}
 
-<!-- CSS -->
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/pages.css">
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-<!-- Favicon (ロゴ画像から作成予定) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233CA77A'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='32' font-weight='700' fill='%23fff' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ============================================
+   HEADER (Dark variant for home)
+   ============================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: stretch;
+  height: 84px;
+  background: transparent;
+  transition: background .35s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(44, 44, 44, .92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,.08);
+}
+
+.header-logo-wrap {
+  display: flex;
+  align-items: center;
+  padding: 0 36px 0 32px;
+  background: #FFFFFF;
+  min-width: 200px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+}
+
+.site-header .header-logo-wrap {
+  background: #FFFFFF;
+}
+
+.logo-cube {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+  display: inline-block;
+  background:
+    linear-gradient(135deg, #6FA37E 0%, #487D58 100%);
+  position: relative;
+  border-radius: 4px;
+  transform: rotate(0deg);
+  box-shadow:
+    inset -8px -8px 0 rgba(0,0,0,.18),
+    inset 8px 8px 0 rgba(255,255,255,.15);
+}
+
+.logo-cube::before,
+.logo-cube::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, transparent 48%, rgba(255,255,255,.25) 48%, rgba(255,255,255,.25) 52%, transparent 52%),
+    linear-gradient(45deg, transparent 48%, rgba(0,0,0,.15) 48%, rgba(0,0,0,.15) 52%, transparent 52%);
+  border-radius: 4px;
+}
+
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--dark);
+}
+
+.header-nav-area {
+  flex: 1;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 48px;
+  position: relative;
+}
+
+.header-nav-area::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background: var(--dark);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 18px 100%);
+}
+
+.main-nav {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+}
+
+.main-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 22px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: opacity .25s ease;
+}
+
+.main-nav a:hover { opacity: .7; }
+
+.main-nav a .nav-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  color: #B4D4BD;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+  margin-right: 20px;
+  z-index: 1100;
+}
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #fff;
+  margin: 6px 0;
+  transition: all .3s;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  background: var(--gradient-hero);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 80px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(255,255,255,.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(255,255,255,.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 720px;
+}
+
+.hero-title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(22px, 3.4vw, 32px);
+  font-weight: 600;
+  letter-spacing: .08em;
+  margin-bottom: 36px;
+  line-height: 1.6;
+  text-shadow: 0 2px 12px rgba(0,0,0,.18);
+}
+
+.hero-text {
+  font-size: clamp(13px, 1.4vw, 15px);
+  line-height: 2.4;
+  font-weight: 400;
+  letter-spacing: .04em;
+  margin-bottom: 14px;
+}
+
+.hero-text + .hero-text { margin-top: 18px; }
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 48px;
+  padding: 16px 44px;
+  background: rgba(255,255,255,.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 999px;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  transition: all .35s ease;
+}
+
+.hero-cta:hover {
+  background: rgba(255,255,255,.95);
+  color: var(--green-dark);
+}
+
+.hero-cta svg { width: 14px; height: 14px; }
+
+/* ============================================
+   SERVICE SECTION HEADING
+   ============================================ */
+.section-heading {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-heading .en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: .12em;
+  display: block;
+  line-height: 1;
+}
+
+.section-heading .jp {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  letter-spacing: .25em;
+  display: block;
+  margin-top: 12px;
+}
+
+/* ============================================
+   SERVICES
+   ============================================ */
+.services {
+  padding: 110px 0 80px;
+  background: #FFFFFF;
+}
+
+.service-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto 80px;
+  padding: 0 32px;
+}
+
+.service-block:last-child { margin-bottom: 0; }
+
+.service-block.alt {
+  background: var(--bg-soft);
+  margin: 0 0 0;
+  padding: 90px 32px;
+  max-width: none;
+  gap: 0;
+  grid-template-columns: 1fr;
+}
+
+.service-block.alt .service-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.service-block.alt + .service-block { margin-top: 80px; }
+
+.service-image-wrap {
+  position: relative;
+}
+
+.service-image {
+  width: 100%;
+  aspect-ratio: 5/4;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 14px 40px rgba(0,0,0,.10);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-image-secondary {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 4/3;
+  bottom: -42px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.14);
+  border: 6px solid var(--bg);
+}
+
+.service-block .service-image-secondary { right: -28px; }
+.service-block.alt .service-image-secondary { left: -28px; }
+
+.service-content h3 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.5;
+  letter-spacing: .03em;
+}
+
+.service-content h3 .sub {
+  display: block;
+  font-size: .85em;
+  margin-bottom: 4px;
+}
+
+.service-content p {
+  font-size: 15px;
+  line-height: 2.1;
+  color: var(--text-mid);
+  margin-bottom: 32px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: var(--green);
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  transition: all .3s ease;
+  box-shadow: 0 6px 18px rgba(91,155,110,.28);
+}
+
+.btn-primary:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(91,155,110,.36);
+}
+
+.btn-primary svg { width: 14px; height: 14px; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer-cta {
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);
+  padding: 80px 24px 60px;
+  color: #FFFFFF;
+  position: relative;
+}
+
+.footer-cta-grid {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cta-card {
+  background: #FFFFFF;
+  color: var(--text);
+  padding: 24px 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all .3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.16);
+}
+
+.cta-icon {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.cta-text h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: .04em;
+}
+
+.cta-text p {
+  font-size: 11.5px;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.footer-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+
+.footer-col h5 {
+  font-size: 13px;
+  letter-spacing: .15em;
+  font-weight: 500;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.95);
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  font-size: 13px;
+  color: rgba(255,255,255,.88);
+  transition: opacity .25s;
+  letter-spacing: .04em;
+}
+.footer-col a:hover { opacity: .65; }
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  text-align: center;
+}
+
+.footer-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.footer-logo .logo-cube {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
+
+.footer-logo .logo-text {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.copyright {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .1em;
+}
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.delay-1 { transition-delay: .1s; }
+.reveal.delay-2 { transition-delay: .2s; }
+.reveal.delay-3 { transition-delay: .3s; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 968px) {
+  .header-logo-wrap { min-width: 160px; padding: 0 28px 0 20px; }
+  .main-nav { gap: 0; }
+  .main-nav a { padding: 10px 14px; font-size: 12px; }
+  .main-nav a .nav-en { font-size: 9px; }
+  .service-block,
+  .service-block.alt .service-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .service-block.alt .service-inner { grid-template-areas: 'a' 'b'; }
+  .service-block .service-image-secondary,
+  .service-block.alt .service-image-secondary {
+    right: 0; left: auto;
+    bottom: -28px;
+    width: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header { height: 64px; }
+  .header-logo-wrap {
+    padding: 0 20px 0 16px;
+    min-width: auto;
+  }
+  .logo-cube { width: 28px; height: 28px; }
+  .logo-text { font-size: 18px; }
+  .header-nav-area {
+    padding-right: 0;
+    justify-content: flex-end;
+  }
+  .nav-toggle { display: block; margin-right: 16px; }
+  .main-nav {
+    position: fixed;
+    inset: 64px 0 0;
+    background: var(--dark);
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    transform: translateX(100%);
+    transition: transform .35s ease;
+  }
+  .main-nav.open { transform: translateX(0); }
+  .main-nav a { padding: 18px; font-size: 15px; }
+  .main-nav a .nav-en { font-size: 11px; }
+
+  .hero { padding: 100px 24px 60px; }
+  .hero-title { font-size: 18px; margin-bottom: 28px; }
+  .hero-text { font-size: 12px; line-height: 2.1; }
+
+  .services { padding: 70px 0 50px; }
+  .service-block,
+  .service-block.alt {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .service-block.alt { padding: 60px 24px; }
+  .service-content h3 { font-size: 20px; }
+  .service-content p { font-size: 14px; }
+
+  .footer-cta-grid { grid-template-columns: 1fr; gap: 14px; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .footer-cta { padding: 60px 24px 40px; }
+}
+
+@media (max-width: 480px) {
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .section-heading { margin-bottom: 44px; }
+}
+</style>
 </head>
 <body>
 
-<!-- ============================================
-     ヘッダー
-============================================ -->
-<header class="site-header">
-  <div class="header-inner">
-    <a href="./index.html" class="header-logo">
-      <img src="./images/logo-cube.png" alt="legends" class="logo-mark-img">
-      <div class="logo-text">legends</div>
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <div class="header-logo-wrap">
+    <a href="./index.html" style="display: inline-flex; align-items: center;">
+      <span class="logo-cube" aria-hidden="true"></span>
+      <span class="logo-text">legends</span>
     </a>
-    <nav class="header-nav">
-      <a href="./index.html" class="current">
-        <span>ホーム</span>
-        <span class="nav-en">HOME</span>
-      </a>
-      <a href="./works.html">
-        <span>施工事例</span>
-        <span class="nav-en">WORKS</span>
-      </a>
-      <a href="./company.html">
-        <span>会社案内</span>
-        <span class="nav-en">ABOUT</span>
-      </a>
-      <a href="./contact.html">
-        <span>お問い合わせ</span>
-        <span class="nav-en">CONTACT</span>
-      </a>
-    </nav>
-    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false">
+  </div>
+  <div class="header-nav-area">
+    <button class="nav-toggle" id="navToggle" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
+    <nav>
+      <ul class="main-nav" id="mainNav">
+        <li><a href="./index.html">ホーム<span class="nav-en">HOME</span></a></li>
+        <li><a href="./works.html">施工事例<span class="nav-en">WORKS</span></a></li>
+        <li><a href="./company.html">会社案内<span class="nav-en">ABOUT</span></a></li>
+        <li><a href="./contact.html">お問い合わせ<span class="nav-en">CONTACT</span></a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<main>
-
-<!-- ============================================
-     ヒーロー
-============================================ -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-message">
-    <h1 class="hero-catch">&ldquo;暮らしと産業の、その先へ。&rdquo;</h1>
-    <div class="hero-body">
-      <p>
-        朝、スイッチを入れる。明かりが灯り、空気が動きはじめる。<br>
-        誰も気づかない、けれど確かにそこにある快適。<br>
-        私たちがつくるのは、そんな「当たり前」です。
-      </p>
-      <p>
-        一本の配線に、流れる想い。一台の空調に、宿る技術。<br>
-        暑い夏も、凍える冬も、その部屋に、ちょうどいい空気を。<br>
-        見えないところで、人と街を支える。それが、私たちの誇りです。<br>
-        電気が灯り、空気が整う。あなたの毎日の、すぐそばに。
-      </p>
-    </div>
-    <a href="./company.html" class="btn btn-ghost">
+  <div class="hero-content">
+    <h1 class="hero-title reveal">&ldquo; 暮 ら し と 産 業 の 、 そ の 先 へ 。 &rdquo;</h1>
+    <p class="hero-text reveal delay-1">朝、スイッチを入れる。明かりが灯り、空気が動きはじめる。<br>誰も気づかない、けれど確かにそこにある快適。<br>私たちがつくるのは、そんな「当たり前」です。</p>
+    <p class="hero-text reveal delay-1">一本の配線に、流れる想い。一台の空調に、宿る技術。<br>暑い夏も、凍える冬も、その部屋に、ちょうどいい空気を。</p>
+    <p class="hero-text reveal delay-2">見えないところで、人と街を支える。それが、私たちの誇りです。<br>電気が灯り、空気が整う。あなたの毎日の、すぐそばに。</p>
+    <a href="./company.html" class="hero-cta reveal delay-3">
       会社について
-      <span style="font-size: 12px;">›</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
   </div>
 </section>
 
-<!-- ============================================
-     SERVICE - 電気・土木・空調をワンストップで
-============================================ -->
-<section class="intro-section">
-  <p class="label reveal">SERVICE</p>
-  <div class="intro-content">
-    <div class="intro-image reveal">
-      <img src="./images/service/lobby.jpg" alt="商業施設の電気設備工事事例">
+<!-- SERVICES -->
+<section class="services">
+  <div class="section-heading reveal">
+    <span class="en">SERVICE</span>
+    <span class="jp">事 業 内 容</span>
+  </div>
+
+  <!-- Service 1 -->
+  <div class="service-block">
+    <div class="service-image-wrap reveal">
+      <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1000&q=75&auto=format&fit=crop');"></div>
+      <div class="service-image-secondary" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=75&auto=format&fit=crop');"></div>
     </div>
-    <div class="intro-text reveal reveal-delay-1">
+    <div class="service-content reveal delay-1">
       <h3>電気・土木・空調を<br>ワンストップで。</h3>
-      <p>
-        電気設備から外構配管・電気土木・空調設備まで工事全体をトータルでサポート。
-        工程管理を一本化する事でコスト削減と工期短縮を実現します。
-      </p>
-      <a href="./works.html" class="btn btn-primary btn-arrow">施工事例を見る</a>
+      <p>電気設備から外構配管・電気土木・空調設備まで、<br>工事全体をトータルでサポート。工程管理を一本化する事で<br>コスト削減と工期短縮を実現します。</p>
+      <a href="./works.html" class="btn-primary">
+        施工事例を見る
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
   </div>
-  <div class="intro-sub-image align-right reveal reveal-delay-2">
-    <img src="./images/service/aerial-work.jpg" alt="高所作業車による電気工事">
+
+  <!-- Service 2 (alt: background) -->
+  <div class="service-block alt">
+    <div class="service-inner">
+      <div class="service-content reveal" style="order:1;">
+        <h3>確かな施工で、<br>未来の基盤を築く。</h3>
+        <p>高品質な施工で安全で快適な環境創り、<br>地域や社会の未来を支える基盤を築きます。<br>一つひとつの現場に、誠実な仕事を積み重ねてまいります。</p>
+        <a href="./works.html" class="btn-primary">
+          施工事例を見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="service-image-wrap reveal delay-1" style="order:2;">
+        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1000&q=75&auto=format&fit=crop');"></div>
+        <div class="service-image-secondary" style="background-image: url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=75&auto=format&fit=crop');"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Service 3 -->
+  <div class="service-block">
+    <div class="service-image-wrap reveal">
+      <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1000&q=75&auto=format&fit=crop');"></div>
+      <div class="service-image-secondary" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=75&auto=format&fit=crop');"></div>
+    </div>
+    <div class="service-content reveal delay-1">
+      <h3><span class="sub">確かな提案、迅速な対応。</span>地域を支える総合パートナー</h3>
+      <p>当社は、電気設備工事・電気土木工事・空調設備工事を中心に、お客様のニーズに合わせた最適な提案と迅速な対応を心がけています。豊富な経験と確かな技術力で、企画から施工、アフターフォローまで一貫してサポート。地域の皆様の暮らしや事業を支える総合設備パートナーとして、安全・安心・高品質なサービスを提供します。</p>
+      <a href="./works.html" class="btn-primary">
+        施工事例を見る
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- ============================================
-     第2ブロック - 確かな施工で、未来の基盤を築く
-============================================ -->
-<section class="intro-section">
-  <div class="intro-content reverse">
-    <div class="intro-image reveal">
-      <img src="./images/service/solar.jpg" alt="再生可能エネルギー設備の施工">
-    </div>
-    <div class="intro-text reveal reveal-delay-1">
-      <h3>確かな施工で、<br>未来の基盤を築く。</h3>
-      <p>
-        高品質な施工で安全で快適な環境創り、
-        地域や社会の未来を支える基盤を築きます。
-      </p>
-      <a href="./works.html" class="btn btn-primary btn-arrow">施工事例を見る</a>
-    </div>
-  </div>
-  <div class="intro-sub-image align-left reveal reveal-delay-2">
-    <img src="./images/service/scaffold.jpg" alt="大型ビル施工現場">
-  </div>
-</section>
-
-<!-- ============================================
-     第3ブロック - 確かな提案、迅速な対応
-============================================ -->
-<section class="intro-section">
-  <div class="intro-content">
-    <div class="intro-image reveal">
-      <img src="./images/service/callcenter.jpg" alt="お客様サポート窓口">
-    </div>
-    <div class="intro-text reveal reveal-delay-1">
-      <h3>
-        <span class="small">確かな提案、迅速な対応。</span>
-        地域を支える総合パートナー
-      </h3>
-      <p>
-        当社は、電気設備工事・電気土木工事・空調設備工事を中心に、
-        お客様のニーズに合わせた最適な提案と迅速な対応を心がけています。
-        豊富な経験と確かな技術力で、企画から施工、アフターフォローまで一貫してサポート。
-        地域の皆様の暮らしや事業を支える総合設備パートナーとして、
-        安全・安心・高品質なサービスを提供します。
-      </p>
-      <a href="./works.html" class="btn btn-primary btn-arrow">施工事例を見る</a>
-    </div>
-  </div>
-  <div class="intro-sub-image align-center reveal reveal-delay-2">
-    <img src="./images/service/handshake.jpg" alt="お客様との信頼関係">
-  </div>
-</section>
-
-</main>
-
-<!-- ============================================
-     フッターバナー
-============================================ -->
-<section class="footer-banners">
-  <div class="container">
-    <a href="#" class="banner-card">
-      <div class="banner-icon">B</div>
-      <div class="banner-text">
-        <strong>BLOG</strong>
-        <span>有益なコンテンツをお届けします</span>
+<!-- FOOTER -->
+<footer class="footer-cta">
+  <div class="footer-cta-grid">
+    <a href="#" class="cta-card reveal">
+      <div class="cta-icon">B</div>
+      <div class="cta-text">
+        <h4>BLOG</h4>
+        <p>有益なコンテンツをお届けします</p>
       </div>
     </a>
-    <a href="#" class="banner-card">
-      <div class="banner-icon">人</div>
-      <div class="banner-text">
-        <strong>正社員募集</strong>
-        <span>一緒に働く仲間を募集しています</span>
+    <a href="#" class="cta-card reveal delay-1">
+      <div class="cta-icon">人</div>
+      <div class="cta-text">
+        <h4>正社員募集</h4>
+        <p>一緒に働く仲間を募集しています</p>
       </div>
     </a>
-    <a href="#" class="banner-card">
-      <div class="banner-icon">協</div>
-      <div class="banner-text">
-        <strong>協力会社募集</strong>
-        <span>協力いただける会社を募集しています</span>
+    <a href="#" class="cta-card reveal delay-2">
+      <div class="cta-icon">協</div>
+      <div class="cta-text">
+        <h4>協力会社募集</h4>
+        <p>協力いただける会社を募集しています</p>
       </div>
     </a>
   </div>
-</section>
 
-<!-- ============================================
-     フッター
-============================================ -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-menus">
-      <div>
-        <h4 class="footer-menu-title">メニュー</h4>
-        <ul class="footer-menu-list">
-          <li><a href="./index.html">ホーム</a></li>
-          <li><a href="./works.html">施工事例</a></li>
-          <li><a href="./company.html">会社案内</a></li>
-          <li><a href="./contact.html">お問い合わせ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-menu-title">その他</h4>
-        <ul class="footer-menu-list">
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">正社員募集</a></li>
-          <li><a href="#">協力会社募集</a></li>
-        </ul>
-      </div>
+  <div class="footer-main">
+    <div class="footer-col">
+      <h5>メニュー</h5>
+      <ul>
+        <li><a href="./index.html">ホーム</a></li>
+        <li><a href="./works.html">施工事例</a></li>
+        <li><a href="./company.html">会社案内</a></li>
+        <li><a href="./contact.html">お問い合わせ</a></li>
+      </ul>
     </div>
-    <div class="footer-bottom">
-      <img src="./images/logo-cube.png" alt="legends" class="footer-logo-img">
-      <div class="footer-name">legends</div>
-      <div class="footer-copy">Copyright &copy; legends Ltd. All Rights Reserved.</div>
+    <div class="footer-col">
+      <h5>その他</h5>
+      <ul>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">正社員募集</a></li>
+        <li><a href="#">協力会社募集</a></li>
+      </ul>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-logo">
+      <span class="logo-cube" aria-hidden="true"></span>
+      <span class="logo-text">legends</span>
+    </div>
+    <p class="copyright">Copyright © legends Ltd. All Rights Reserved.</p>
   </div>
 </footer>
 
-<script src="./js/main.js"></script>
+<script>
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Header scroll
+const header = document.getElementById('siteHeader');
+const onScroll = () => {
+  if (window.scrollY > 80) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Mobile nav
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+navToggle?.addEventListener('click', () => {
+  mainNav.classList.toggle('open');
+});
+mainNav?.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => mainNav.classList.remove('open'));
+});
+</script>
+
 </body>
 </html>

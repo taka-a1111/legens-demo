@@ -1,215 +1,700 @@
 <!DOCTYPE html>
-<html lang="ja"><script>document.documentElement.classList.add("js");</script>
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>施工事例｜有限会社レジェンズ｜電気設備工事・空調工事の実績</title>
-<meta name="description" content="有限会社レジェンズの電気設備工事・電気土木工事・空調設備工事の施工事例をご紹介。商業施設・オフィス・工場など、多様な現場での実績をご覧いただけます。">
-<meta name="keywords" content="電気設備工事 事例,空調工事 実績,大阪,有限会社レジェンズ">
-
+<title>施工事例 WORKS｜有限会社レジェンズ</title>
+<meta name="description" content="有限会社レジェンズの施工事例。電気設備工事・電気土木工事・空調設備工事の実績をご紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #5B9B6E;
+  --green-dark: #487D58;
+  --green-light: #7BB48B;
+  --green-pale: #E8F1EB;
+  --dark: #2C2C2C;
+  --text: #2A2A2A;
+  --text-mid: #5C5C5C;
+  --text-light: #8A8A8A;
+  --bg: #FFFFFF;
+  --bg-soft: #F5F4F0;
+  --bg-warm: #ECEAE3;
+  --border: #E5E5E5;
+}
 
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/pages.css">
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg-soft);
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233CA77A'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='32' font-weight='700' fill='%23fff' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+/* ===== HEADER (same as index) ===== */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: stretch;
+  height: 84px;
+  transition: background .35s ease;
+}
+.site-header.scrolled {
+  background: rgba(44,44,44,.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,.08);
+}
+.header-logo-wrap {
+  display: flex; align-items: center;
+  padding: 0 36px 0 32px;
+  background: #FFFFFF;
+  min-width: 200px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+}
+.logo-cube {
+  width: 36px; height: 36px;
+  margin-right: 12px;
+  background: linear-gradient(135deg, #6FA37E 0%, #487D58 100%);
+  border-radius: 4px;
+  box-shadow: inset -8px -8px 0 rgba(0,0,0,.18), inset 8px 8px 0 rgba(255,255,255,.15);
+  position: relative;
+}
+.logo-cube::before, .logo-cube::after {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(135deg, transparent 48%, rgba(255,255,255,.25) 48%, rgba(255,255,255,.25) 52%, transparent 52%),
+    linear-gradient(45deg, transparent 48%, rgba(0,0,0,.15) 48%, rgba(0,0,0,.15) 52%, transparent 52%);
+  border-radius: 4px;
+}
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  letter-spacing: .04em; color: var(--dark);
+}
+.header-nav-area {
+  flex: 1; background: var(--dark);
+  display: flex; align-items: center;
+  justify-content: flex-end;
+  padding-right: 48px;
+  position: relative;
+}
+.header-nav-area::before {
+  content: ''; position: absolute;
+  left: -1px; top: 0;
+  width: 32px; height: 100%;
+  background: var(--dark);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 18px 100%);
+}
+.main-nav { display: flex; gap: 4px; list-style: none; }
+.main-nav a {
+  display: flex; flex-direction: column;
+  align-items: center;
+  padding: 12px 22px;
+  color: #FFFFFF;
+  font-size: 14px; font-weight: 500;
+  transition: opacity .25s ease;
+}
+.main-nav a:hover { opacity: .7; }
+.main-nav a.active { color: var(--green-light); }
+.main-nav a .nav-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: .15em;
+  color: #B4D4BD;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+.nav-toggle {
+  display: none; background: none; border: none;
+  cursor: pointer; padding: 8px;
+  margin-left: auto; margin-right: 20px;
+}
+.nav-toggle span {
+  display: block; width: 26px; height: 2px;
+  background: #fff; margin: 6px 0;
+  transition: all .3s;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-hero {
+  padding: 140px 24px 60px;
+  background: var(--bg-soft);
+  text-align: center;
+}
+.breadcrumb {
+  max-width: 1180px;
+  margin: 0 auto 40px;
+  text-align: left;
+  font-size: 12px;
+  color: var(--text-mid);
+  letter-spacing: .05em;
+}
+.breadcrumb a { color: var(--text-mid); transition: color .2s; }
+.breadcrumb a:hover { color: var(--green); }
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: .12em;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.page-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  letter-spacing: .3em;
+}
+
+/* ===== CATEGORY TABS ===== */
+.category-tabs {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 30px 24px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: transparent;
+}
+.cat-tab {
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  letter-spacing: .1em;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  cursor: pointer;
+  position: relative;
+  transition: all .25s ease;
+}
+.cat-tab:last-child { border-right: 1px solid var(--border); }
+.cat-tab .cat-en {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: var(--text-light);
+  letter-spacing: .15em;
+  margin-top: 4px;
+}
+.cat-tab.active {
+  color: var(--green);
+  border-bottom: 2px solid var(--green);
+}
+.cat-tab.active .cat-en { color: var(--green); }
+.cat-tab:hover { color: var(--green); }
+.cat-tab svg {
+  width: 10px; height: 10px;
+  margin-left: 6px;
+  display: inline;
+  vertical-align: middle;
+}
+
+/* ===== WORKS GRID ===== */
+.works-section {
+  padding: 50px 24px 100px;
+  background: var(--bg-soft);
+}
+
+.works-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.work-card {
+  position: relative;
+  aspect-ratio: 4/3;
+  background: var(--bg-warm);
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+  transition: all .4s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.14);
+}
+
+.work-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.work-card:hover img { transform: scale(1.06); }
+
+.work-card .work-label {
+  position: absolute;
+  top: 0; left: 0;
+  background: var(--green);
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  padding: 8px 16px;
+  border-radius: 0 0 4px 0;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.work-card .work-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.55) 100%);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.work-card:hover .work-overlay { opacity: 1; }
+
+.work-card.placeholder {
+  background: linear-gradient(135deg, #C9B98A 0%, #B5A275 100%);
+  position: relative;
+}
+
+.work-card.placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(255,255,255,.4);
+  pointer-events: none;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  max-width: 1180px;
+  margin: 60px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.page-num {
+  width: 42px; height: 42px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: all .25s ease;
+  background: transparent;
+}
+.page-num:hover {
+  background: var(--green-pale);
+  color: var(--green);
+}
+.page-num.active {
+  background: var(--green);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(91,155,110,.3);
+}
+
+.page-arrow {
+  width: 42px; height: 42px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-mid);
+  transition: color .2s;
+}
+.page-arrow:hover { color: var(--green); }
+.page-arrow svg { width: 16px; height: 16px; }
+
+/* ===== FOOTER (same as index) ===== */
+.footer-cta {
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);
+  padding: 80px 24px 60px;
+  color: #FFFFFF;
+}
+.footer-cta-grid {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cta-card {
+  background: #FFFFFF;
+  color: var(--text);
+  padding: 24px 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all .3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.16);
+}
+.cta-icon {
+  flex: 0 0 56px; width: 56px; height: 56px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #FFFFFF;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 600;
+}
+.cta-text h4 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 4px; letter-spacing: .04em;
+}
+.cta-text p {
+  font-size: 11.5px; color: var(--text-mid); line-height: 1.5;
+}
+.footer-main {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+.footer-col h5 {
+  font-size: 13px; letter-spacing: .15em;
+  font-weight: 500;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.95);
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  font-size: 13px;
+  color: rgba(255,255,255,.88);
+  transition: opacity .25s;
+  letter-spacing: .04em;
+}
+.footer-col a:hover { opacity: .65; }
+.footer-bottom {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  text-align: center;
+}
+.footer-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; margin-bottom: 16px;
+}
+.footer-logo .logo-cube { width: 30px; height: 30px; margin: 0; }
+.footer-logo .logo-text { color: #FFFFFF; font-size: 18px; }
+.copyright {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .1em;
+}
+
+/* ===== REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .works-grid { grid-template-columns: repeat(2, 1fr); }
+  .category-tabs { grid-template-columns: repeat(2, 1fr); }
+  .cat-tab:nth-child(odd) { border-right: 1px solid var(--border); }
+  .cat-tab:nth-child(1), .cat-tab:nth-child(2) { border-bottom: none; }
+  .header-logo-wrap { min-width: 160px; padding: 0 28px 0 20px; }
+  .main-nav a { padding: 10px 14px; font-size: 12px; }
+  .main-nav a .nav-en { font-size: 9px; }
+}
+
+@media (max-width: 768px) {
+  .site-header { height: 64px; }
+  .header-logo-wrap { padding: 0 20px 0 16px; min-width: auto; }
+  .logo-cube { width: 28px; height: 28px; }
+  .logo-text { font-size: 18px; }
+  .header-nav-area { padding-right: 0; }
+  .nav-toggle { display: block; margin-right: 16px; }
+  .main-nav {
+    position: fixed; inset: 64px 0 0;
+    background: var(--dark);
+    flex-direction: column; justify-content: center;
+    gap: 8px;
+    transform: translateX(100%);
+    transition: transform .35s ease;
+  }
+  .main-nav.open { transform: translateX(0); }
+  .main-nav a { padding: 18px; font-size: 15px; }
+  .main-nav a .nav-en { font-size: 11px; }
+
+  .page-hero { padding: 100px 20px 40px; }
+  .works-grid { grid-template-columns: 1fr; gap: 16px; }
+  .footer-cta-grid { grid-template-columns: 1fr; gap: 14px; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 480px) {
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+  .category-tabs { grid-template-columns: 1fr; }
+  .cat-tab { border-right: 1px solid var(--border) !important; border-bottom: none !important; }
+  .cat-tab:last-child { border-bottom: 1px solid var(--border) !important; }
+}
+</style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="./index.html" class="header-logo">
-      <img src="./images/logo-cube.png" alt="legends" class="logo-mark-img">
-      <div class="logo-text">legends</div>
+<!-- HEADER -->
+<header class="site-header scrolled" id="siteHeader">
+  <div class="header-logo-wrap">
+    <a href="./index.html" style="display: inline-flex; align-items: center;">
+      <span class="logo-cube" aria-hidden="true"></span>
+      <span class="logo-text">legends</span>
     </a>
-    <nav class="header-nav">
-      <a href="./index.html"><span>ホーム</span><span class="nav-en">HOME</span></a>
-      <a href="./works.html" class="current"><span>施工事例</span><span class="nav-en">WORKS</span></a>
-      <a href="./company.html"><span>会社案内</span><span class="nav-en">ABOUT</span></a>
-      <a href="./contact.html"><span>お問い合わせ</span><span class="nav-en">CONTACT</span></a>
-    </nav>
-    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false">
+  </div>
+  <div class="header-nav-area">
+    <button class="nav-toggle" id="navToggle" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
+    <nav>
+      <ul class="main-nav" id="mainNav">
+        <li><a href="./index.html">ホーム<span class="nav-en">HOME</span></a></li>
+        <li><a href="./works.html" class="active">施工事例<span class="nav-en">WORKS</span></a></li>
+        <li><a href="./company.html">会社案内<span class="nav-en">ABOUT</span></a></li>
+        <li><a href="./contact.html">お問い合わせ<span class="nav-en">CONTACT</span></a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<main>
-
-<div class="container">
-  <nav class="breadcrumb">
-    <a href="./index.html">Home</a>
-    <span class="breadcrumb-sep">&gt;</span>
-    <span>施工事例</span>
-  </nav>
-</div>
-
-<div class="page-hero">
-  <h1>WORKS</h1>
-  <p class="ja">施工事例</p>
-</div>
-
-<div class="container">
-
-  <div class="works-tabs">
-    <button class="works-tab active" data-category="all">ALL</button>
-    <button class="works-tab" data-category="electric">電気設備工事</button>
-    <button class="works-tab" data-category="civil">電気土木工事</button>
-    <button class="works-tab" data-category="aircon">空調設備工事</button>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="./index.html">Home</a> &gt; 施工事例
   </div>
+  <h1 class="page-title">WORKS</h1>
+  <p class="page-subtitle">施 工 事 例</p>
+</section>
 
+<!-- CATEGORY TABS -->
+<div class="category-tabs">
+  <button class="cat-tab active" data-cat="all">
+    ALL
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <button class="cat-tab" data-cat="cat1">
+    電気設備工事
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <button class="cat-tab" data-cat="cat2">
+    電気土木工事
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+  <button class="cat-tab" data-cat="cat3">
+    空調設備工事
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </button>
+</div>
+
+<!-- WORKS GRID -->
+<section class="works-section">
   <div class="works-grid">
-    <!-- Row 1 -->
-    <div class="works-item reveal">
-      <span class="works-tag">空調設備</span>
-      <img src="./images/works/rooftop-aircon-01.jpg" alt="屋上空調機ユニットの設置工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気土木</span>
-      <img src="./images/works2/electric_1.jpg" alt="配管埋設・電気土木工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気設備</span>
-      <img src="./images/works2/att5.jpg" alt="商業施設ロビーの電気設備工事">
-    </div>
-
-    <!-- Row 2 -->
-    <div class="works-item reveal">
-      <span class="works-tag">電気設備</span>
-      <img src="./images/works2/att1.jpg" alt="大型施設内装の電気設備工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気土木</span>
-      <img src="./images/works2/electric_5.jpg" alt="小型重機による電気土木工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気設備</span>
-      <img src="./images/works/interior-construction.jpg" alt="商業施設内装の電気設備工事">
-    </div>
-
-    <!-- Row 3 -->
-    <div class="works-item reveal">
-      <span class="works-tag">空調設備</span>
-      <img src="./images/works/rooftop-aircon-02.jpg" alt="ビル屋上の空調設備工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気土木</span>
-      <img src="./images/works2/electric_4.jpg" alt="電柱建柱・電気土木工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気設備</span>
-      <img src="./images/works/ceiling-work.jpg" alt="天井内装の電気設備工事">
-    </div>
-
-    <!-- Row 4 -->
-    <div class="works-item reveal">
-      <span class="works-tag">空調設備</span>
-      <img src="./images/works2/garden_2.jpg" alt="屋上空調機の設置工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気土木</span>
-      <img src="./images/works/small-excavator.jpg" alt="小型重機による電気土木工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気設備</span>
-      <img src="./images/works/large-site-interior.jpg" alt="大型施設内装の電気設備工事">
-    </div>
-
-    <!-- Row 5 -->
-    <div class="works-item reveal">
-      <span class="works-tag">空調設備</span>
-      <img src="./images/works2/garden_1.jpg" alt="屋上配管・空調設備工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気土木</span>
-      <img src="./images/works2/electric_3.jpg" alt="配管敷設・電気土木工事">
-    </div>
-    <div class="works-item reveal">
-      <span class="works-tag">電気設備</span>
-      <img src="./images/works/large-site-exterior.jpg" alt="大型施設の電気設備工事">
-    </div>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1565608438257-fac3c27beb36?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1581093458791-9d2b11b1b8a4?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1545972154-9bb223aac798?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <span class="work-label">電気設備工事</span>
+      <img src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1604335398480-1c39d5f8b62a?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1564540583246-934409427776?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal">
+      <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=75&auto=format&fit=crop" alt="施工事例">
+      <div class="work-overlay"></div>
+    </a>
+    <a href="#" class="work-card reveal placeholder">
+      <span class="work-label">造園工事・エクステリア</span>
+    </a>
+    <a href="#" class="work-card reveal placeholder">
+      <span class="work-label">お庭のお手入れ・植栽管理</span>
+    </a>
+    <a href="#" class="work-card reveal placeholder">
+      <span class="work-label">造園工事・エクステリア</span>
+    </a>
+    <a href="#" class="work-card reveal placeholder">
+      <span class="work-label">お庭のデザイン・改修提案</span>
+    </a>
+    <a href="#" class="work-card reveal placeholder">
+      <span class="work-label">お庭のデザイン・改修提案</span>
+    </a>
+    <a href="#" class="work-card reveal placeholder">
+      <span class="work-label">お庭のデザイン・改修提案</span>
+    </a>
   </div>
 
-  <div class="works-pagination">
-    <span class="current">1</span>
-    <a href="#">2</a>
-    <a href="#" aria-label="次のページ">›</a>
-  </div>
-
-</div>
-
-</main>
-
-<section class="footer-banners">
-  <div class="container">
-    <a href="#" class="banner-card">
-      <div class="banner-icon">B</div>
-      <div class="banner-text"><strong>BLOG</strong><span>有益なコンテンツをお届けします</span></div>
-    </a>
-    <a href="#" class="banner-card">
-      <div class="banner-icon">人</div>
-      <div class="banner-text"><strong>正社員募集</strong><span>一緒に働く仲間を募集しています</span></div>
-    </a>
-    <a href="#" class="banner-card">
-      <div class="banner-icon">協</div>
-      <div class="banner-text"><strong>協力会社募集</strong><span>協力いただける会社を募集しています</span></div>
+  <!-- Pagination -->
+  <div class="pagination">
+    <a href="#" class="page-num active">1</a>
+    <a href="#" class="page-num">2</a>
+    <a href="#" class="page-arrow" aria-label="次へ">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
     </a>
   </div>
 </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-menus">
-      <div>
-        <h4 class="footer-menu-title">メニュー</h4>
-        <ul class="footer-menu-list">
-          <li><a href="./index.html">ホーム</a></li>
-          <li><a href="./works.html">施工事例</a></li>
-          <li><a href="./company.html">会社案内</a></li>
-          <li><a href="./contact.html">お問い合わせ</a></li>
-        </ul>
+<!-- FOOTER -->
+<footer class="footer-cta">
+  <div class="footer-cta-grid">
+    <a href="#" class="cta-card">
+      <div class="cta-icon">B</div>
+      <div class="cta-text">
+        <h4>BLOG</h4>
+        <p>有益なコンテンツをお届けします</p>
       </div>
-      <div>
-        <h4 class="footer-menu-title">その他</h4>
-        <ul class="footer-menu-list">
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">正社員募集</a></li>
-          <li><a href="#">協力会社募集</a></li>
-        </ul>
+    </a>
+    <a href="#" class="cta-card">
+      <div class="cta-icon">人</div>
+      <div class="cta-text">
+        <h4>正社員募集</h4>
+        <p>一緒に働く仲間を募集しています</p>
       </div>
+    </a>
+    <a href="#" class="cta-card">
+      <div class="cta-icon">協</div>
+      <div class="cta-text">
+        <h4>協力会社募集</h4>
+        <p>協力いただける会社を募集しています</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="footer-main">
+    <div class="footer-col">
+      <h5>メニュー</h5>
+      <ul>
+        <li><a href="./index.html">ホーム</a></li>
+        <li><a href="./works.html">施工事例</a></li>
+        <li><a href="./company.html">会社案内</a></li>
+        <li><a href="./contact.html">お問い合わせ</a></li>
+      </ul>
     </div>
-    <div class="footer-bottom">
-      <img src="./images/logo-cube.png" alt="legends" class="footer-logo-img">
-      <div class="footer-name">legends</div>
-      <div class="footer-copy">Copyright &copy; legends Ltd. All Rights Reserved.</div>
+    <div class="footer-col">
+      <h5>その他</h5>
+      <ul>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">正社員募集</a></li>
+        <li><a href="#">協力会社募集</a></li>
+      </ul>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-logo">
+      <span class="logo-cube" aria-hidden="true"></span>
+      <span class="logo-text">legends</span>
+    </div>
+    <p class="copyright">Copyright © legends Ltd. All Rights Reserved.</p>
   </div>
 </footer>
 
-<script src="./js/main.js"></script>
 <script>
-  // 施工事例カテゴリ切り替え
-  (function() {
-    const tabs = document.querySelectorAll('.works-tab');
-    const items = document.querySelectorAll('.works-item');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const cat = tab.dataset.category;
-        items.forEach(item => {
-          const itemCat = item.querySelector('.works-tag').textContent.trim();
-          let show = cat === 'all';
-          if (cat === 'electric' && itemCat === '電気設備') show = true;
-          if (cat === 'civil' && itemCat === '電気土木') show = true;
-          if (cat === 'aircon' && itemCat === '空調設備') show = true;
-          item.style.display = show ? '' : 'none';
-        });
-      });
-    });
-  })();
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Header scroll - always keep "scrolled" appearance for inner pages
+const header = document.getElementById('siteHeader');
+// Already starts with .scrolled — no toggle needed
+
+// Mobile nav
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+navToggle?.addEventListener('click', () => mainNav.classList.toggle('open'));
+mainNav?.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => mainNav.classList.remove('open'));
+});
+
+// Category tabs filter
+document.querySelectorAll('.cat-tab').forEach(tab => {
+  tab.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+  });
+});
 </script>
+
 </body>
 </html>

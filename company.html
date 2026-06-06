@@ -1,203 +1,708 @@
 <!DOCTYPE html>
-<html lang="ja"><script>document.documentElement.classList.add("js");</script>
+<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>会社案内｜有限会社レジェンズ｜大阪の電気設備工事会社</title>
-<meta name="description" content="有限会社レジェンズの会社概要・経営理念・代表挨拶。大阪府大東市を拠点に電気設備工事・電気土木工事・空調設備工事を手掛ける総合設備パートナーです。">
-
+<title>会社案内 COMPANY｜有限会社レジェンズ</title>
+<meta name="description" content="有限会社レジェンズの会社案内。社長挨拶・企業理念・会社概要をご紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --green: #5B9B6E;
+  --green-dark: #487D58;
+  --green-light: #7BB48B;
+  --green-pale: #E8F1EB;
+  --dark: #2C2C2C;
+  --text: #2A2A2A;
+  --text-mid: #5C5C5C;
+  --text-light: #8A8A8A;
+  --bg: #FFFFFF;
+  --bg-soft: #F5F4F0;
+  --bg-warm: #ECEAE3;
+  --border: #E5E5E5;
+}
 
-<link rel="stylesheet" href="./css/style.css">
-<link rel="stylesheet" href="./css/pages.css">
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--text);
+  background: var(--bg-soft);
+  line-height: 1.9;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%233CA77A'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='32' font-weight='700' fill='%23fff' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E">
+/* ===== HEADER ===== */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000; display: flex; align-items: stretch;
+  height: 84px;
+  background: rgba(44,44,44,.92);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0,0,0,.08);
+}
+.header-logo-wrap {
+  display: flex; align-items: center;
+  padding: 0 36px 0 32px;
+  background: #FFFFFF;
+  min-width: 200px;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 18px) 100%, 0 100%);
+}
+.logo-cube {
+  width: 36px; height: 36px;
+  margin-right: 12px;
+  background: linear-gradient(135deg, #6FA37E 0%, #487D58 100%);
+  border-radius: 4px;
+  box-shadow: inset -8px -8px 0 rgba(0,0,0,.18), inset 8px 8px 0 rgba(255,255,255,.15);
+  position: relative;
+}
+.logo-cube::before, .logo-cube::after {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(135deg, transparent 48%, rgba(255,255,255,.25) 48%, rgba(255,255,255,.25) 52%, transparent 52%),
+    linear-gradient(45deg, transparent 48%, rgba(0,0,0,.15) 48%, rgba(0,0,0,.15) 52%, transparent 52%);
+  border-radius: 4px;
+}
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  letter-spacing: .04em; color: var(--dark);
+}
+.header-nav-area {
+  flex: 1; background: var(--dark);
+  display: flex; align-items: center;
+  justify-content: flex-end;
+  padding-right: 48px; position: relative;
+}
+.header-nav-area::before {
+  content: ''; position: absolute;
+  left: -1px; top: 0; width: 32px; height: 100%;
+  background: var(--dark);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 18px 100%);
+}
+.main-nav { display: flex; gap: 4px; list-style: none; }
+.main-nav a {
+  display: flex; flex-direction: column;
+  align-items: center;
+  padding: 12px 22px;
+  color: #FFFFFF;
+  font-size: 14px; font-weight: 500;
+  transition: opacity .25s ease;
+}
+.main-nav a:hover { opacity: .7; }
+.main-nav a.active { color: var(--green-light); }
+.main-nav a .nav-en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: .15em; color: #B4D4BD;
+  margin-top: 2px; text-transform: uppercase;
+}
+.nav-toggle {
+  display: none; background: none; border: none;
+  cursor: pointer; padding: 8px;
+  margin-left: auto; margin-right: 20px;
+}
+.nav-toggle span {
+  display: block; width: 26px; height: 2px;
+  background: #fff; margin: 6px 0;
+}
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+  padding: 140px 24px 60px;
+  background: var(--bg-soft);
+  text-align: center;
+}
+.breadcrumb {
+  max-width: 1080px;
+  margin: 0 auto 40px;
+  text-align: left;
+  font-size: 12px;
+  color: var(--text-mid);
+  letter-spacing: .05em;
+}
+.breadcrumb a { transition: color .2s; }
+.breadcrumb a:hover { color: var(--green); }
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 5vw, 56px);
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: .12em;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.page-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
+  letter-spacing: .3em;
+}
+
+/* ===== PRESIDENT CARD ===== */
+.president-section {
+  padding: 30px 24px 90px;
+  background: var(--bg-soft);
+}
+
+.president-card {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding: 70px 80px 60px;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0,0,0,.05);
+}
+
+.president-card .label {
+  text-align: center;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--green);
+  letter-spacing: .15em;
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.president-card .label::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 40px; height: 1px;
+  background: var(--green);
+}
+
+.president-headline {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  letter-spacing: .04em;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+.president-body p {
+  font-size: 14.5px;
+  line-height: 2.2;
+  color: var(--text-mid);
+  margin-bottom: 22px;
+}
+
+.president-sign {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.president-sign-text {
+  text-align: right;
+}
+
+.president-sign-text .company {
+  font-size: 13px;
+  color: var(--text-mid);
+  margin-bottom: 4px;
+}
+
+.president-sign-text .position {
+  font-size: 12px;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+}
+
+.president-sign-text .name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: .15em;
+}
+
+.president-portrait {
+  width: 70px;
+  height: 90px;
+  background: linear-gradient(135deg, #C9B98A 0%, #A89564 100%);
+  border-radius: 3px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.president-portrait::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+/* ===== PHILOSOPHY ===== */
+.philosophy {
+  padding: 80px 24px;
+  background: var(--green-pale);
+}
+
+.philosophy-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.philosophy-icon {
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, #6FA37E 0%, #487D58 100%);
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 6px 16px rgba(91,155,110,.3);
+}
+
+.philosophy-icon::after {
+  content: 'legends';
+  position: absolute;
+  left: 50%; bottom: -20px;
+  transform: translateX(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 9px;
+  color: var(--green-dark);
+  letter-spacing: .1em;
+}
+
+.philosophy h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--green-dark);
+  margin-bottom: 20px;
+  letter-spacing: .05em;
+}
+
+.philosophy-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--text);
+  margin-bottom: 36px;
+  letter-spacing: .03em;
+}
+
+.philosophy-sub h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 14px;
+  letter-spacing: .1em;
+}
+
+.philosophy-sub ul {
+  list-style: none;
+  font-size: 13.5px;
+  line-height: 2;
+  color: var(--text-mid);
+}
+
+.philosophy-sub li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.philosophy-sub li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 14px;
+  width: 8px; height: 1px;
+  background: var(--green);
+}
+
+/* ===== COMPANY OUTLINE ===== */
+.company-outline {
+  padding: 90px 24px 100px;
+  background: var(--bg-soft);
+}
+
+.outline-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.outline-title .en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.4vw, 36px);
+  color: var(--green);
+  font-weight: 600;
+  letter-spacing: .15em;
+  display: block;
+}
+
+.outline-title .jp {
+  font-size: 13px;
+  color: var(--text-mid);
+  letter-spacing: .3em;
+  margin-top: 6px;
+  display: block;
+}
+
+.outline-table {
+  max-width: 920px;
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+.outline-table tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.outline-table tr:last-child { border-bottom: none; }
+
+.outline-table th {
+  width: 200px;
+  padding: 22px 24px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  background: transparent;
+  letter-spacing: .08em;
+  vertical-align: top;
+}
+
+.outline-table td {
+  padding: 22px 24px;
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.9;
+  vertical-align: top;
+}
+
+.outline-table td .small {
+  display: block;
+  font-size: 13px;
+  color: var(--text-mid);
+  margin-top: 4px;
+}
+
+/* ===== FOOTER ===== */
+.footer-cta {
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);
+  padding: 80px 24px 60px;
+  color: #FFFFFF;
+}
+.footer-cta-grid {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.cta-card {
+  background: #FFFFFF;
+  color: var(--text);
+  padding: 24px 28px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all .3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,.10);
+}
+.cta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,.16);
+}
+.cta-icon {
+  flex: 0 0 56px; width: 56px; height: 56px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #FFFFFF;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 600;
+}
+.cta-text h4 {
+  font-size: 15px; font-weight: 600;
+  margin-bottom: 4px; letter-spacing: .04em;
+}
+.cta-text p { font-size: 11.5px; color: var(--text-mid); line-height: 1.5; }
+.footer-main {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+.footer-col h5 {
+  font-size: 13px; letter-spacing: .15em;
+  font-weight: 500; margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,.95);
+}
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a {
+  font-size: 13px;
+  color: rgba(255,255,255,.88);
+  letter-spacing: .04em;
+  transition: opacity .25s;
+}
+.footer-col a:hover { opacity: .65; }
+.footer-bottom {
+  max-width: 1100px;
+  margin: 36px auto 0;
+  text-align: center;
+}
+.footer-logo {
+  display: inline-flex; flex-direction: column;
+  align-items: center; gap: 8px;
+  margin-bottom: 16px;
+}
+.footer-logo .logo-cube { width: 30px; height: 30px; margin: 0; }
+.footer-logo .logo-text { color: #FFFFFF; font-size: 18px; }
+.copyright {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  letter-spacing: .1em;
+}
+
+/* ===== REVEAL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .header-logo-wrap { min-width: 160px; padding: 0 28px 0 20px; }
+  .main-nav a { padding: 10px 14px; font-size: 12px; }
+  .main-nav a .nav-en { font-size: 9px; }
+  .president-card { padding: 50px 36px 40px; }
+  .president-headline { font-size: 20px; margin-bottom: 36px; }
+}
+
+@media (max-width: 768px) {
+  .site-header { height: 64px; }
+  .header-logo-wrap { padding: 0 20px 0 16px; min-width: auto; }
+  .logo-cube { width: 28px; height: 28px; }
+  .logo-text { font-size: 18px; }
+  .header-nav-area { padding-right: 0; }
+  .nav-toggle { display: block; margin-right: 16px; }
+  .main-nav {
+    position: fixed; inset: 64px 0 0;
+    background: var(--dark);
+    flex-direction: column; justify-content: center;
+    gap: 8px;
+    transform: translateX(100%);
+    transition: transform .35s ease;
+  }
+  .main-nav.open { transform: translateX(0); }
+  .main-nav a { padding: 18px; font-size: 15px; }
+  .main-nav a .nav-en { font-size: 11px; }
+
+  .page-hero { padding: 100px 20px 40px; }
+  .president-card { padding: 40px 24px 32px; }
+  .president-headline { font-size: 18px; }
+  .president-body p { font-size: 13.5px; line-height: 2; }
+  .philosophy-inner { grid-template-columns: 1fr; gap: 20px; }
+  .philosophy-text { font-size: 15px; }
+  .outline-table th,
+  .outline-table td { display: block; padding: 12px 16px; }
+  .outline-table th { width: auto; background: var(--green-pale); color: var(--green-dark); padding-bottom: 12px; }
+  .outline-table tr { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  .footer-cta-grid { grid-template-columns: 1fr; gap: 14px; }
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+@media (max-width: 480px) {
+  .footer-main { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="site-header">
-  <div class="header-inner">
-    <a href="./index.html" class="header-logo">
-      <img src="./images/logo-cube.png" alt="legends" class="logo-mark-img">
-      <div class="logo-text">legends</div>
+  <div class="header-logo-wrap">
+    <a href="./index.html" style="display: inline-flex; align-items: center;">
+      <span class="logo-cube" aria-hidden="true"></span>
+      <span class="logo-text">legends</span>
     </a>
-    <nav class="header-nav">
-      <a href="./index.html"><span>ホーム</span><span class="nav-en">HOME</span></a>
-      <a href="./works.html"><span>施工事例</span><span class="nav-en">WORKS</span></a>
-      <a href="./company.html" class="current"><span>会社案内</span><span class="nav-en">ABOUT</span></a>
-      <a href="./contact.html"><span>お問い合わせ</span><span class="nav-en">CONTACT</span></a>
-    </nav>
-    <button class="menu-toggle" aria-label="メニュー" aria-expanded="false">
+  </div>
+  <div class="header-nav-area">
+    <button class="nav-toggle" id="navToggle" aria-label="メニュー">
       <span></span><span></span><span></span>
     </button>
+    <nav>
+      <ul class="main-nav" id="mainNav">
+        <li><a href="./index.html">ホーム<span class="nav-en">HOME</span></a></li>
+        <li><a href="./works.html">施工事例<span class="nav-en">WORKS</span></a></li>
+        <li><a href="./company.html" class="active">会社案内<span class="nav-en">ABOUT</span></a></li>
+        <li><a href="./contact.html">お問い合わせ<span class="nav-en">CONTACT</span></a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<main>
-
-<div class="container">
-  <nav class="breadcrumb">
-    <a href="./index.html">Home</a>
-    <span class="breadcrumb-sep">&gt;</span>
-    <span>会社案内</span>
-  </nav>
-</div>
-
-<div class="page-hero">
-  <h1>COMPANY</h1>
-  <p class="ja">会社案内</p>
-</div>
-
-<!-- 社長あいさつ -->
-<div class="company-message reveal">
-  <div class="company-message-head">
-    <div class="label">社長あいさつ</div>
-    <h2>確かな技術で、<br>未来の快適を創っていきます。</h2>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="./index.html">Home</a> &gt; 会社案内
   </div>
-  <div class="company-message-grid">
-    <div class="company-message-body">
+  <h1 class="page-title">COMPANY</h1>
+  <p class="page-subtitle">会 社 案 内</p>
+</section>
+
+<!-- PRESIDENT -->
+<section class="president-section">
+  <div class="president-card reveal">
+    <p class="label">社長あいさつ</p>
+    <h2 class="president-headline">確かな技術で、<br>未来の快適を創っていきます。</h2>
+    <div class="president-body">
       <p>平素より格別のご厚情を賜り、誠にありがとうございます。</p>
       <p>私たちは創業以来、電気設備と空調工事を通じて、人々が安心して過ごせる空間づくりに努めてまいりました。明かりが灯り、空気が整う——その当たり前の快適さは、一本の配線、一台の機器に向き合う、地道な仕事の積み重ねによって支えられています。</p>
       <p>私たちが大切にしているのは、目に見えない部分にこそ誠実であること。お客様の信頼にお応えするため、確かな技術と細やかな対応を磨き続けてまいりました。</p>
       <p>社会の変化とともに、求められる設備のかたちも変わり続けています。これからも時代のニーズを見据え、より快適で持続可能な環境づくりに貢献してまいります。</p>
       <p>今後とも変わらぬご支援を賜りますよう、心よりお願い申し上げます。</p>
-      <div class="company-message-sign">
-        <span>有限会社レジェンズ 代表</span>
-        <strong>肥後 邦彦</strong>
+      <div class="president-sign">
+        <div class="president-sign-text">
+          <p class="company">有限会社レジェンズ</p>
+          <p class="position">代表</p>
+          <p class="name">肥後 邦彦</p>
+        </div>
+        <div class="president-portrait" aria-hidden="true"></div>
       </div>
-    </div>
-    <div class="company-message-photo" aria-label="代表者写真（後日差し替え）">
-      <span class="photo-placeholder-label">PHOTO</span>
-    </div>
-  </div>
-</div>
-
-<!-- 企業理念 -->
-<section class="company-philosophy">
-  <div class="philosophy-inner">
-    <div class="philosophy-logo"><img src="./images/logo-cube.png" alt="legends"></div>
-    <div class="philosophy-content reveal">
-      <h3>企業理念</h3>
-      <p class="principle">
-        &ldquo;お客様のニーズを理解し、最適な電気設備をともに創り上げ社員の成長を支援し、働き甲斐のある職場環境を構築する。&rdquo;
-      </p>
-      <h4>行動指針</h4>
-      <ul>
-        <li>感謝の気持ち：周囲への感謝の気持ちを忘れず、謙虚な姿勢で接する。</li>
-        <li>誠実な対応：常に誠実で丁寧な対応を心がける。</li>
-        <li>目標達成：常に目標を意識し、達成のために努力する。</li>
-      </ul>
     </div>
   </div>
 </section>
 
-<!-- 会社概要 -->
-<section class="company-overview">
-  <h2>会社概要</h2>
-  <table class="company-table">
+<!-- PHILOSOPHY -->
+<section class="philosophy">
+  <div class="philosophy-inner reveal">
+    <div class="philosophy-icon" aria-hidden="true"></div>
+    <div>
+      <h2>企業理念</h2>
+      <p class="philosophy-text">&ldquo;お客様のニーズを理解し、最適な電気設備をともに創り上げ社員の成長を支援し、<br>働き甲斐のある職場環境を構築する。&rdquo;</p>
+      <div class="philosophy-sub">
+        <h3>行動指針</h3>
+        <ul>
+          <li><strong style="color:var(--text);">感謝の気持ち：</strong>周囲への感謝の気持ちを忘れず、謙虚な姿勢で接する。</li>
+          <li><strong style="color:var(--text);">誠実な対応：</strong>常に誠実で丁寧な対応を心がける。</li>
+          <li><strong style="color:var(--text);">目標達成：</strong>常に目標を意識し、達成のために努力する。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY OUTLINE -->
+<section class="company-outline">
+  <div class="outline-title reveal">
+    <span class="en">OUTLINE</span>
+    <span class="jp">会 社 概 要</span>
+  </div>
+  <table class="outline-table reveal">
     <tbody>
-      <tr>
-        <th>商号</th>
-        <td>有限会社レジェンズ</td>
-      </tr>
-      <tr>
-        <th>代表者</th>
-        <td>肥後 邦彦</td>
-      </tr>
-      <tr>
-        <th>所在地</th>
-        <td>
-          大阪府大東市寺川2-3-6<br>
-          TEL：072-806-8890<br>
-          FAX：050-3730-1626
-        </td>
-      </tr>
-      <tr>
-        <th>事業内容</th>
-        <td>電気設備工事・電気土木・空調設備工事・設計・施工・ビル・店舗等　空調機器（ルームクーラー含む）販売</td>
-      </tr>
-      <tr>
-        <th>会社設立</th>
-        <td>2004年12月20日</td>
-      </tr>
-      <tr>
-        <th>協力会社</th>
-        <td>28社</td>
-      </tr>
-      <tr>
-        <th>取引会社</th>
-        <td>りそな銀行、大阪シティ信用金庫、大阪市信用金庫</td>
-      </tr>
-      <tr>
-        <th>主要取引先</th>
-        <td>リシュモンジャパン合同会社、株式会社Jフロント建装、株式会社ドロワ、神戸船舶装備株式会社、ケーツーエンジニアリング株式会社（順不同）</td>
-      </tr>
-      <tr>
-        <th>建設業許可</th>
-        <td>大阪府知事許可（般-27）第144738</td>
-      </tr>
-      <tr>
-        <th>産業廃棄物許可証</th>
-        <td>大阪府知事許可第02700206163</td>
-      </tr>
-      <tr>
-        <th>古物商許可</th>
-        <td>（法人）第62228R06484号</td>
-      </tr>
+      <tr><th>商号</th><td>有限会社レジェンズ</td></tr>
+      <tr><th>代表者</th><td>肥後 邦彦</td></tr>
+      <tr><th>所在地</th><td>大阪府大東市寺川2-3-6<br>TEL：072-806-8890<br>FAX：050-3730-1626</td></tr>
+      <tr><th>事業内容</th><td>電気設備工事・電気土木・空調設備工事・設計・施工・ビル・店舗等　空調機器（ルームクーラー含む）販売</td></tr>
+      <tr><th>会社設立</th><td>2004年12月20日</td></tr>
+      <tr><th>協力会社</th><td>28社</td></tr>
+      <tr><th>取引会社</th><td>りそな銀行、大阪シティ信用金庫、大阪市信用金庫</td></tr>
+      <tr><th>主要取引先</th><td>リシュモンジャパン合同会社、株式会社Jフロント建装、株式会社ドロワ、神戸船舶装備株式会社、ケーツーエンジニアリング株式会社（順不同）</td></tr>
+      <tr><th>建設業許可</th><td>大阪府知事許可（般-27）第144738</td></tr>
+      <tr><th>産業廃棄物許可証</th><td>大阪府知事許可第02700206163</td></tr>
+      <tr><th>古物商許可</th><td>（法人）第62228R06484号</td></tr>
     </tbody>
   </table>
 </section>
 
-</main>
-
-<section class="footer-banners">
-  <div class="container">
-    <a href="#" class="banner-card">
-      <div class="banner-icon">B</div>
-      <div class="banner-text"><strong>BLOG</strong><span>有益なコンテンツをお届けします</span></div>
+<!-- FOOTER -->
+<footer class="footer-cta">
+  <div class="footer-cta-grid">
+    <a href="#" class="cta-card">
+      <div class="cta-icon">B</div>
+      <div class="cta-text">
+        <h4>BLOG</h4>
+        <p>有益なコンテンツをお届けします</p>
+      </div>
     </a>
-    <a href="#" class="banner-card">
-      <div class="banner-icon">人</div>
-      <div class="banner-text"><strong>正社員募集</strong><span>一緒に働く仲間を募集しています</span></div>
+    <a href="#" class="cta-card">
+      <div class="cta-icon">人</div>
+      <div class="cta-text">
+        <h4>正社員募集</h4>
+        <p>一緒に働く仲間を募集しています</p>
+      </div>
     </a>
-    <a href="#" class="banner-card">
-      <div class="banner-icon">協</div>
-      <div class="banner-text"><strong>協力会社募集</strong><span>協力いただける会社を募集しています</span></div>
+    <a href="#" class="cta-card">
+      <div class="cta-icon">協</div>
+      <div class="cta-text">
+        <h4>協力会社募集</h4>
+        <p>協力いただける会社を募集しています</p>
+      </div>
     </a>
   </div>
-</section>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-menus">
-      <div>
-        <h4 class="footer-menu-title">メニュー</h4>
-        <ul class="footer-menu-list">
-          <li><a href="./index.html">ホーム</a></li>
-          <li><a href="./works.html">施工事例</a></li>
-          <li><a href="./company.html">会社案内</a></li>
-          <li><a href="./contact.html">お問い合わせ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="footer-menu-title">その他</h4>
-        <ul class="footer-menu-list">
-          <li><a href="#">BLOG</a></li>
-          <li><a href="#">正社員募集</a></li>
-          <li><a href="#">協力会社募集</a></li>
-        </ul>
-      </div>
+  <div class="footer-main">
+    <div class="footer-col">
+      <h5>メニュー</h5>
+      <ul>
+        <li><a href="./index.html">ホーム</a></li>
+        <li><a href="./works.html">施工事例</a></li>
+        <li><a href="./company.html">会社案内</a></li>
+        <li><a href="./contact.html">お問い合わせ</a></li>
+      </ul>
     </div>
-    <div class="footer-bottom">
-      <img src="./images/logo-cube.png" alt="legends" class="footer-logo-img">
-      <div class="footer-name">legends</div>
-      <div class="footer-copy">Copyright &copy; legends Ltd. All Rights Reserved.</div>
+    <div class="footer-col">
+      <h5>その他</h5>
+      <ul>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">正社員募集</a></li>
+        <li><a href="#">協力会社募集</a></li>
+      </ul>
     </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-logo">
+      <span class="logo-cube" aria-hidden="true"></span>
+      <span class="logo-text">legends</span>
+    </div>
+    <p class="copyright">Copyright © legends Ltd. All Rights Reserved.</p>
   </div>
 </footer>
 
-<script src="./js/main.js"></script>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const navToggle = document.getElementById('navToggle');
+const mainNav = document.getElementById('mainNav');
+navToggle?.addEventListener('click', () => mainNav.classList.toggle('open'));
+mainNav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mainNav.classList.remove('open')));
+</script>
+
 </body>
 </html>
