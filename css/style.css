@@ -207,37 +207,37 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
 .header-inner {
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0 40px;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
 }
 
-/* ロゴエリア: 黒い箱の中にロゴと白いテキスト */
+/* ロゴエリア: 3Dキューブ + "legends"テキスト（白背景） */
 .header-logo {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  gap: 14px;
-  background: #1a1a1a;
-  padding: 0 40px;
+  gap: 4px;
+  background: transparent;
+  padding: 0;
   text-decoration: none;
-  min-width: 220px;
+  min-width: auto;
   justify-content: center;
 }
 .header-logo .logo-mark-img {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   display: block;
-  border-radius: 4px;
+  flex-shrink: 0;
 }
 .header-logo .logo-text {
   font-family: var(--font-en, "Montserrat", sans-serif);
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gray-900);
 }
 
 /* ナビゲーション: 黒文字、各項目が高さ100%の縦長セル */
@@ -476,14 +476,14 @@ main {
 
   /* ヘッダー */
   .site-header { height: var(--header-h-sp); }
-  .header-inner { padding: 0; }
+  .header-inner { padding: 0 16px; }
   .header-logo {
     min-width: auto;
-    padding: 0 20px;
-    gap: 10px;
+    padding: 0;
+    gap: 2px;
   }
-  .header-logo .logo-mark-img { width: 32px; height: 32px; }
-  .header-logo .logo-text { font-size: 17px; }
+  .header-logo .logo-mark-img { width: 34px; height: 34px; }
+  .header-logo .logo-text { font-size: 11px; }
 
   .menu-toggle { display: block; }
 
