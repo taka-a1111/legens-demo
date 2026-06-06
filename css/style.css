@@ -444,19 +444,21 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   margin-top: 8px;
 }
 
-/* === スクロール出現アニメーション === */
-.reveal {
+/* === スクロール出現アニメーション ===
+   Progressive Enhancement: JSが効いている場合のみ非表示にする
+   .js クラスは <head> のインラインscriptで即座に付与される */
+.js .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
+.js .reveal-delay-1 { transition-delay: 0.1s; }
+.js .reveal-delay-2 { transition-delay: 0.2s; }
+.js .reveal-delay-3 { transition-delay: 0.3s; }
 
 /* === メインコンテンツの上部余白 === */
 main {
@@ -544,27 +546,4 @@ main {
 
 @media (max-width: 480px) {
   .section-title { font-size: 22px; }
-}
-
-/* ============================================
-   DEMOバナー（クライアント確認用Vercel版のみ）
-   本番納品時は削除すること
-============================================ */
-.demo-badge {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: #DC2626;
-  color: #fff;
-  padding: 6px 16px;
-  font-family: var(--font-en);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  z-index: 9999;
-  pointer-events: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-@media (max-width: 768px) {
-  .demo-badge { font-size: 10px; padding: 4px 12px; }
 }
