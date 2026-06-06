@@ -218,27 +218,21 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
 }
-.header-logo .logo-mark {
+.header-logo .logo-mark-img {
   width: 56px;
   height: 56px;
+  object-fit: contain;
+  display: block;
+  background: var(--white);
   border-radius: 50%;
-  background: var(--primary);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-en);
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
 }
 .header-logo .logo-text {
-  font-family: var(--font-en);
-  font-size: 11px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.05em;
   color: var(--primary);
 }
 
@@ -414,28 +408,23 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
-.footer-logo {
+.footer-logo-img {
   width: 64px;
   height: 64px;
+  object-fit: contain;
+  display: block;
+  background: var(--white);
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-en);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--white);
 }
 .footer-name {
-  font-family: var(--font-en);
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   margin-top: 4px;
+  color: var(--white);
 }
 .footer-copy {
   font-size: 11px;
@@ -488,8 +477,8 @@ main {
   /* ヘッダー */
   .site-header { height: var(--header-h-sp); }
   .header-inner { padding-inline: 20px; }
-  .header-logo .logo-mark { width: 40px; height: 40px; font-size: 18px; }
-  .header-logo .logo-text { font-size: 9px; }
+  .header-logo .logo-mark-img { width: 36px; height: 36px; }
+  .header-logo .logo-text { font-size: 10px; }
 
   .menu-toggle { display: block; }
 
