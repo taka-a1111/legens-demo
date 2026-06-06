@@ -221,12 +221,11 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   gap: 4px;
 }
 .header-logo .logo-mark-img {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   display: block;
-  background: var(--white);
-  border-radius: 50%;
+  border-radius: 6px;
 }
 .header-logo .logo-text {
   font-family: "Noto Sans JP", sans-serif;
@@ -411,12 +410,11 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   gap: 8px;
 }
 .footer-logo-img {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
   display: block;
-  background: var(--white);
-  border-radius: 50%;
+  border-radius: 6px;
 }
 .footer-name {
   font-family: "Noto Sans JP", sans-serif;
