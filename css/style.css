@@ -197,112 +197,114 @@ button { background: none; border: none; cursor: pointer; font: inherit; color: 
   left: 0;
   right: 0;
   height: var(--header-h);
-  background: var(--white);
+  background: #ffffff;
   z-index: 100;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   border-bottom: 1px solid var(--gray-100);
 }
 
 .header-inner {
   width: 100%;
-  max-width: var(--container-max);
-  margin-inline: auto;
-  padding-inline: 32px;
+  margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 }
 
+/* ロゴエリア: 黒い箱の中にロゴと白いテキスト */
 .header-logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 4px;
+  gap: 14px;
+  background: #1a1a1a;
+  padding: 0 40px;
+  text-decoration: none;
+  min-width: 220px;
+  justify-content: center;
 }
 .header-logo .logo-mark-img {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
   display: block;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .header-logo .logo-text {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 12px;
+  font-family: var(--font-en, "Montserrat", sans-serif);
+  font-size: 22px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--primary);
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
+/* ナビゲーション: 黒文字、各項目が高さ100%の縦長セル */
 .header-nav {
   display: flex;
-  gap: 48px;
-  align-items: center;
+  gap: 0;
+  align-items: stretch;
+  padding-right: 0;
 }
 .header-nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  font-size: 15px;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 36px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--gray-900);
+  text-decoration: none;
   position: relative;
-  padding: 8px 0;
+  transition: background var(--transition);
 }
-.header-nav a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--primary);
-  transition: width var(--transition);
+.header-nav a::after { display: none; }
+.header-nav a:hover {
+  background: rgba(0, 0, 0, 0.04);
 }
-.header-nav a:hover,
 .header-nav a.current {
-  color: var(--primary);
-}
-.header-nav a:hover::after,
-.header-nav a.current::after {
-  width: 100%;
+  background: rgba(0, 0, 0, 0.06);
 }
 .header-nav a .nav-en {
-  font-family: var(--font-en);
+  font-family: var(--font-en, "Montserrat", sans-serif);
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   color: var(--gray-500);
 }
 .header-nav a:hover .nav-en,
 .header-nav a.current .nav-en {
-  color: var(--primary);
+  color: var(--gray-900);
 }
 
 /* モバイルメニュートグル */
 .menu-toggle {
   display: none;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   position: relative;
+  background: transparent;
+  border: none;
+  margin-right: 12px;
+  align-self: center;
 }
 .menu-toggle span {
   position: absolute;
-  left: 8px;
+  left: 12px;
   width: 24px;
   height: 2px;
   background: var(--gray-900);
   transition: var(--transition);
 }
-.menu-toggle span:nth-child(1) { top: 14px; }
-.menu-toggle span:nth-child(2) { top: 20px; }
-.menu-toggle span:nth-child(3) { top: 26px; }
-.menu-toggle.active span:nth-child(1) { top: 20px; transform: rotate(45deg); }
+.menu-toggle span:nth-child(1) { top: 16px; }
+.menu-toggle span:nth-child(2) { top: 23px; }
+.menu-toggle span:nth-child(3) { top: 30px; }
+.menu-toggle.active span:nth-child(1) { top: 23px; transform: rotate(45deg); }
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) { top: 20px; transform: rotate(-45deg); }
+.menu-toggle.active span:nth-child(3) { top: 23px; transform: rotate(-45deg); }
 
 /* === パンくず === */
 .breadcrumb {
@@ -474,9 +476,14 @@ main {
 
   /* ヘッダー */
   .site-header { height: var(--header-h-sp); }
-  .header-inner { padding-inline: 20px; }
-  .header-logo .logo-mark-img { width: 36px; height: 36px; }
-  .header-logo .logo-text { font-size: 10px; }
+  .header-inner { padding: 0; }
+  .header-logo {
+    min-width: auto;
+    padding: 0 20px;
+    gap: 10px;
+  }
+  .header-logo .logo-mark-img { width: 32px; height: 32px; }
+  .header-logo .logo-text { font-size: 17px; }
 
   .menu-toggle { display: block; }
 
@@ -485,10 +492,10 @@ main {
     top: var(--header-h-sp);
     left: 0;
     right: 0;
-    background: var(--white);
+    background: #ffffff;
     flex-direction: column;
     gap: 0;
-    padding: 24px 20px;
+    padding: 12px 0;
     transform: translateY(-120%);
     transition: transform var(--transition);
     box-shadow: var(--shadow-md);
@@ -500,7 +507,7 @@ main {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 16px 20px;
     border-bottom: 1px solid var(--gray-100);
   }
   .header-nav a::after { display: none; }
