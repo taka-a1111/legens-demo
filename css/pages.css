@@ -643,7 +643,7 @@
 /* 社長あいさつ - 写真枠を署名の隣に配置 */
 .company-message-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
   gap: 32px;
   margin-top: 32px;
@@ -651,6 +651,9 @@
 }
 .company-message-footer .company-message-sign {
   margin-top: 0;
+  flex: 1;
+  text-align: right;
+  min-width: 200px;
 }
 .company-message-photo {
   width: 180px;
